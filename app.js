@@ -4,19 +4,25 @@ class Dice {
     this.numSides = numSides;
     this.result = result;
     this.answer = [];
-    this.dice =
-              { rolled: false
-              }
     this.error();
-
-
+    this.diceArray = [];
   }
 
-  makeDice() {
-    for (var i = 0; i < this.numDice; i++) {
-      var dice+i
+
+  createDieNames() {
+    for (var i = 1; i <= this.numDice; i++) {
+      var newDieName = ("dice" + i);
+      newDieName = {name: i, sides: this.numSides, rolled: false};
+      this.diceArray.push(newDieName);
     }
+    console.log(this.diceArray);
   }
+
+  // makeDice() {
+  //   for (var i = 0; i < this.numDice; i++) {
+  //     var dice+i
+  //   }
+  // }
 
 
 
@@ -30,8 +36,9 @@ class Dice {
   }
 }
 
-var dice1 = new Dice(1, 4, 2);
+var dice = new Dice(2, 6, 10);
 
-dice1.makeDice();
+dice.createDieNames()
+
 
 module.exports = Dice;

@@ -17,4 +17,6 @@ describe('Dice', () => {
     assert.equal(dice.error(), 'Please grab a bigger die ')
   })
 
+  it('should ')
+
 })
